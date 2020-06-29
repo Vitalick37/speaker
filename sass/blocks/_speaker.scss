@@ -1,0 +1,153 @@
+.speaker {
+
+    padding-top: 166px;
+    background-color: #E5E5E5;
+    @include flex-box();
+    justify-content: center;
+
+    &__show {
+        min-height: 620px;
+        width: 960px;
+        background-color: #DAE3F6;
+        position: relative;
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__unit {
+        display: block;
+        position: absolute;
+        top: 58px;
+
+        &_left {
+            left: 184px;
+        }
+
+        &_right {
+            right: 211px;
+        }
+    }
+
+    &__popup {
+
+        &_left {
+            top: -94px;
+            left: 30px;
+            border-radius: 10px;
+            background-color: #fff;
+            position: absolute;
+            display: none;
+        }
+
+        &_right {
+            top: -94px;
+            right: 67px;
+            border-radius: 10px;
+            background-color: #fff;
+            position: absolute;
+            display: none;
+        }
+
+    }
+}
+
+.unit {
+    display: block;
+    position: absolute;
+
+    &_left {
+        top: 210px;
+        left: 155px;
+    }
+
+    &_right {
+        top: 132px;
+        right: 188px;
+    }
+}
+
+.ellipse {
+    position: absolute;
+    width: 517px;
+    height: 48px;
+    left: 230px;
+    bottom: 125px;
+    border-radius: 50%;
+    background: rgba(29, 29, 29, 0.25);
+    filter: blur(40px);
+}
+
+.circle {
+    &_big {
+        position: absolute;
+        top: 72px;
+        width: 73px;
+        height: 73px;
+        border-radius: 50%;
+        background: rgba(57, 125, 255, 0.15);
+        border: 1px solid $main-color;
+
+        &-mini {
+            position: static;
+            margin: 0 auto;
+            width: 160px;
+            height: 160px;
+            display: flex;
+            margin-bottom: 24px;
+
+            .circle_small {
+                display: flex;
+                background-color: $main-color;
+                width: 77px;
+                height: 77px;
+                margin: 0 auto;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    &_big-right {
+        right: 208px;
+    }
+
+    &_big-left {
+        left: 177px;
+    }
+
+
+    &_small {
+        width: 27px;
+        height: 27px;
+        border: 1px solid $main-color;
+        border-radius: 50%;
+        margin: 23px 23px;
+        transition: background-color .3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $main-color;
+        }
+
+        &:hover .plus {
+            display: block;
+        }
+
+    }
+}
+
+.plus {
+
+    display: none;
+    background-color: #fff;
+    width: 9px;
+    height: 1.2px;
+    margin: 0 auto;
+    margin-top: 13.5px;
+
+    &_v {
+        transform: rotate(90deg);
+        margin-top: -1.2px;
+    }
+}

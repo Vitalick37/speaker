@@ -1,0 +1,38 @@
+// @include btn-use ();
+
+@mixin btn-use () {
+    outline: none;
+    &:focus {
+        outline: none;  
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+// @mixin btn-mini-use () {
+//     outline: none;
+//     &:focus {
+//         outline: none;  
+//     }     
+// }
+
+@mixin link-use () {
+    text-decoration: none;
+    // outline: none;
+    color:rgba(43, 45, 58, 0.7); 
+    &:focus {
+        outline: none; 
+        border: none; 
+    }
+    &:hover {
+        outline: none; 
+        border: none; 
+    }     
+}
+
+@mixin flex-box () {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;     
+}

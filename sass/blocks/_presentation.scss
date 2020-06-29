@@ -1,0 +1,45 @@
+.conference {
+    position: relative;
+}
+.presentation {
+    background: url(../img/bg/slider.jpg) center (center/cover) no-repeat;
+    min-height: 624px;
+    padding-top: 123px;
+   
+
+    &__wrapper {
+        @include flex-box();
+    }
+}
+
+.description {
+    margin-right: 430px;
+
+    &__desc {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+        margin-bottom: 12px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 52px;
+        line-height: 63px;
+        align-items: center;
+        color: #FFFFFF;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 148%;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 54px;
+        max-width: 555px;
+    }
+}
