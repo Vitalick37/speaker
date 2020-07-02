@@ -1,20 +1,44 @@
 .speaker {
-
+    // max-width: 1920px;
     padding-top: 166px;
     background-color: #E5E5E5;
     @include flex-box();
     justify-content: center;
 
+    &__inner {
+        width: 100%;
+        @include flex-box();
+        justify-content: center;
+    }
+
     &__show {
-        min-height: 620px;
-        width: 960px;
-        background-color: #DAE3F6;
+        // min-height: 620px;
+        // width: 50%;
+        // background-color: #DAE3F6;
+        // position: relative;
+        flex-basis: 50%;
+        // background: url(../../img/bg/Frame4.png) center (center/cover) no-repeat;
+    }
+
+    &__mark {
+        // width: 50%;
+        flex-basis: 50%;
         position: relative;
+        // background: url(../img/Group711.png) center (center/cover) no-repeat;
     }
 
     &__wrapper {
         position: relative;
+        width: 100%;
+        // background: url(../img/Group711.png) center (center/cover) no-repeat;
+        // min-height: 620px;
+        // @include flex-box();
+        // align-items: start;
     }
+
+    // &__room {
+    //     position: relative;
+    // }
 
     &__unit {
         display: block;
@@ -26,15 +50,16 @@
         }
 
         &_right {
-            right: 211px;
+            // right: 211px;
+            left: 672px;
         }
     }
 
     &__popup {
 
         &_left {
-            top: -94px;
-            left: 30px;
+            top: -109px;
+            left: 48px;
             border-radius: 10px;
             background-color: #fff;
             position: absolute;
@@ -43,13 +68,20 @@
 
         &_right {
             top: -94px;
-            right: 67px;
+            // right: 67px;
+            left: 415px;
             border-radius: 10px;
             background-color: #fff;
             position: absolute;
             display: none;
         }
 
+    }
+
+    &__bg {
+        width: 100%;
+        object-fit: cover;
+object-position: 0 0;
     }
 }
 
@@ -59,7 +91,8 @@
 
     &_left {
         top: 210px;
-        left: 155px;
+        // left: 155px;
+        right: 410px;
     }
 
     &_right {
@@ -82,13 +115,14 @@
 .circle {
     &_big {
         position: absolute;
-        top: 72px;
+        top: 59px;
         width: 73px;
         height: 73px;
         border-radius: 50%;
         background: rgba(57, 125, 255, 0.15);
         border: 1px solid $main-color;
-
+display: flex;
+        // margin-top: 4.5%;
         &-mini {
             position: static;
             margin: 0 auto;
@@ -109,11 +143,14 @@
     }
 
     &_big-right {
-        right: 208px;
+        // left: 710px;
+        right: 20%;
+
     }
 
     &_big-left {
-        left: 177px;
+        // left: 177px;
+        left: 17%;
     }
 
 

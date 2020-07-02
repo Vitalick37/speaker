@@ -1,0 +1,110 @@
+.menu {
+    &-mobile {
+        display: none;
+        position: absolute;
+        right: -50px;
+        bottom: -722px;
+        z-index: 100;
+        background-color: #EBEEF5;
+        padding: 0 16px;
+        min-height: 701px;
+    }
+
+    &__svg-mobile {
+        fill: #2B2D3A;
+        margin-right: 24px;
+        &_circle {
+            fill: transparent; 
+            stroke: #2B2D3A;
+        }
+    }
+
+    &__item-mobile {
+        border-bottom: 1px solid rgba(43, 45, 58, 0.1);
+        width: 343px;
+        padding: 24px 0;
+    }
+
+    &__link-mobile {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.01em;
+        color: #2B2D3A;
+
+        &:hover {
+            color: $main-color;
+        }
+
+    }
+}
+.menu-mobile-active {
+    display: block;
+}
+.menu__link-mobile:hover .menu__svg-mobile {
+    fill: $main-color;
+}
+.menu__link-mobile:hover .menu__svg-mobile_circle {
+    stroke: $main-color;
+    fill: transparent; 
+}
+
+.mobile-mail {
+    display: block !important;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $main-color;
+
+}
+
+.menu-button {
+    display: none;
+    // position: absolute;
+    top: 30px;
+    right: 17px;
+    width: 18px;
+    height: 2px;
+    background: #2B2D3A;
+
+}
+
+.menu-button:before {
+    content: "";
+    display: block;
+    // position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background: #2B2D3A;
+    margin-top: -7px;
+    transition: transform 0.2s;
+}
+
+.menu-button:after {
+    content: "";
+    display: block;
+    // position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background: #2B2D3A;
+    margin-top: 12px;
+    transition: transform 0.2s;
+}
+
+.menu-button-active {
+    height: 0;
+}
+
+.menu-button-active:before {
+    transform: rotate(45deg);
+    margin-top: 0;
+}
+
+.menu-button-active:after {
+    transform: rotate(-45deg);
+    margin-top: -2px;
+}

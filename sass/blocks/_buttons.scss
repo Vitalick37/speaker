@@ -3,7 +3,8 @@
     color: #FFFFFF;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    // font-size: 16px;
+    @include adaptiv-font(16, 14);
     line-height: 20px;
     @include btn-use ();
 
@@ -23,9 +24,16 @@
     }
     &_form {
         background-color: $main-color;
+        margin-top: 5px;
     }
     &_mini {
         width: 100%;
         margin-top: 32px;
+    }
+    &_mobile {
+        background-color: $main-color; 
+        margin-top: 32px;
+        margin-bottom: 32px;
+        width: 100%;
     }
 }

@@ -1,9 +1,12 @@
 .conference {
-    position: relative;
+    position: relative; 
+      
 }
+
 .presentation {
     background: url(../img/bg/slider.jpg) center (center/cover) no-repeat;
     min-height: 624px;
+    padding: 0 50px;
     padding-top: 123px;
    
 
@@ -18,7 +21,8 @@
     &__desc {
         font-style: normal;
         font-weight: 500;
-        font-size: 18px;
+        // font-size: 18px;
+        @include adaptiv-font(18, 14);
         line-height: 22px;
         color: #FFFFFF;
         margin-bottom: 12px;
@@ -26,7 +30,8 @@
 
     &__title {
         font-weight: 600;
-        font-size: 52px;
+        // font-size: 52px;
+       @include adaptiv-font(52, 30);
         line-height: 63px;
         align-items: center;
         color: #FFFFFF;
@@ -36,7 +41,8 @@
     &__text {
         font-style: normal;
         font-weight: 500;
-        font-size: 16px;
+        // font-size: 16px;
+        @include adaptiv-font(16, 14);
         line-height: 148%;
         color: rgba(255, 255, 255, 0.8);
         margin-bottom: 54px;

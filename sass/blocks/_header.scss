@@ -3,11 +3,13 @@ a {
 }
 
 .header {
+    transition: all 1s linear;
     background-color: #EBEEF5;
-    padding: 20px 0 21px 0;
+    padding: 20px 50px 21px 50px;
 
     &__wrapper {
         @include flex-box ();
+        position: relative;
     }
 
     &__logo,
@@ -20,6 +22,11 @@ a {
     }
 }
 
+.logo__img {
+    width: 100%;
+    object-fit: cover;
+}
+
 .menu {
     &__list {
         @include flex-box ();
@@ -27,11 +34,11 @@ a {
 
     &__item {
         margin-right: 30px;
-        
+
 
         &:nth-child(6) {
             margin-right: 0;
-            
+
         }
     }
 
@@ -43,15 +50,16 @@ a {
         padding-bottom: 34px;
         // letter-spacing: .1em;
         transition: text-shadow .3s;
-        
+
 
         &:hover {
             // font-weight: 600;
             color: $main-color;
             border-bottom: 3px solid $main-color;
             text-shadow: 0 0 1px $main-color, 0 0 1px $main-color;
-      
+
         }
+
         // &:hover:after {
         //     display: block; 
         //  }
@@ -65,13 +73,21 @@ a {
         //     box-shadow: 0px -1px 2px rgba(40, 88, 179, 0.15);
         //     border-radius: 6px;
         // }
-      
+
     }
 }
 
 .contact {
     &__mail {
         margin-right: 24px;
+
+        p {
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 27px;
+            color: #2B2D3A;
+            margin-bottom: 16px;
+        }
 
         &-img {
             margin-right: 8px;
@@ -82,6 +98,9 @@ a {
             font-weight: 600;
             font-size: 13px;
             line-height: 16px;
+            display: flex;
+            align-items: center;
+
         }
     }
 
@@ -90,6 +109,7 @@ a {
 
         &-img {
             margin-right: 8px;
+            cursor: pointer;
         }
 
         &-wrapper {
@@ -109,8 +129,28 @@ a {
         &-link {
             font-style: normal;
             font-weight: 600;
-            font-size: 13px;
+            // font-size: 13px;
+            @include adaptiv-font(13, 11);
             line-height: 16px;
         }
     }
 }
+
+// .fix {
+//     position: fixed;
+//     width: 100%;
+//     z-index: 100;
+//     transition: all .5s linear;
+//     top: 0;
+// }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+ 
+  .sticky + .content {
+    padding-top: 60px;
+  }
