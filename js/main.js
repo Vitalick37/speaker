@@ -36,9 +36,9 @@ $(document).ready(function () {
   $('.popup__close, [data-modal=consultation-right]').on('click', function () {
     $('#speaker-left').fadeOut('fast');
   })
-  $('[data-modal=consultation-right]').on('click', function () {
-    $('#speaker-right').fadeIn('slow');
-  })
+  // $('[data-modal=consultation-right]').on('click', function () {
+  //   $('#speaker-right').fadeIn('slow');
+  // })
 
   $('.popup__close, [data-modal=consultation-left]').on('click', function () {
     $('#speaker-right').fadeOut('fast');
@@ -55,13 +55,17 @@ $(document).ready(function () {
   })
 
 
-  // $('[data-modal=callback_mini]').on('click', function () {
-  //     $('.overlay, #consultation_mini').fadeIn('slow');
-  //   })
+  $('[data-modal=callback_mini]').on('click', function () {
+      $('#consultation').fadeOut('fast');
+    })
 
-  //   $('.modal__close').on('click', function () {
-  //     $('.overlay, #consultation_mini').fadeOut('fast');
-  //   })
+  $('[data-modal=callback_mini]').on('click', function () {
+      $('.overlay, #consultation_mini').fadeIn('slow');
+    })
+
+    $('.modal__close, .button_mini').on('click', function () {
+      $('.overlay, #consultation_mini').fadeOut('fast');
+    })
 
 
   // липкое меню 

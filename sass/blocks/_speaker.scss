@@ -58,8 +58,8 @@
     &__popup {
 
         &_left {
-            top: -109px;
-            left: 48px;
+            top: -122px;
+            left: 2px;
             border-radius: 10px;
             background-color: #fff;
             position: absolute;
@@ -81,7 +81,7 @@
     &__bg {
         width: 100%;
         object-fit: cover;
-object-position: 0 0;
+        object-position: 0 0;
     }
 }
 
@@ -121,7 +121,8 @@ object-position: 0 0;
         border-radius: 50%;
         background: rgba(57, 125, 255, 0.15);
         border: 1px solid $main-color;
-display: flex;
+        display: flex;
+
         // margin-top: 4.5%;
         &-mini {
             position: static;
@@ -133,6 +134,8 @@ display: flex;
 
             .circle_small {
                 display: flex;
+                align-items: center;
+                justify-content: center;
                 background-color: $main-color;
                 width: 77px;
                 height: 77px;
